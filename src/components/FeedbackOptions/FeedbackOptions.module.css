@@ -1,0 +1,25 @@
+.btn {
+  width: 33%;
+  height: 28px;
+  max-width: 100px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  border: 2px solid #555;
+  transition: 200ms linear;
+}
+.btn:hover {
+  background-color: rgb(219, 219, 219);
+
+}
+.btn:active {
+  transform: scale(1.1);
+  font-size: 18px;
+}
+.btn_wrapper {
+  width: 352px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

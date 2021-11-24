@@ -1,0 +1,12 @@
+.data_headline{
+  font-size: 20px;
+  margin-bottom: 10px;
+
+}
+.data_wrapper{
+  list-style: none;
+  padding-left: 10px;
+}
+.data_value{
+  font-weight: 700;
+}
