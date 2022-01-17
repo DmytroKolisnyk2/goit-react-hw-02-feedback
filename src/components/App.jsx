@@ -1,9 +1,12 @@
-import "./App.css";
 import React, { Component } from "react";
+
 import Statistics from "./Statistics/Statistics.jsx";
 import Section from "./Section/Section.jsx";
 import FeedbackOptions from "./FeedbackOptions/FeedbackOptions";
 import Notification from "./Notification/Notification";
+
+import "./App.css";
+
 class App extends Component {
   state = {
     good: 0,
