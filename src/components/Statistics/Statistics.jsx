@@ -2,10 +2,15 @@ import styles from "./Statistics.module.css";
 import React from "react";
 import PropTypes from "prop-types";
 
-const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
+const Statistics = ({ statisticData }) => {
   return (
     <ul className={styles.data_wrapper}>
-      <li className={styles.data_headline}>
+      {Object.keys(statisticData).map((item) => (
+        <li key={item} className={styles.data_headline}>
+          {item}: <span className={styles.data_value}>{statisticData[item]}</span>
+        </li>
+      ))}
+      {/* <li className={styles.data_headline}>
         Good: <span className={styles.data_value}>{good}</span>
       </li>
       <li className={styles.data_headline}>
@@ -19,17 +24,13 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
       </li>
       <li className={styles.data_headline}>
         Positive feedback: <span className={styles.data_value}>{positivePercentage}</span>
-      </li>
+      </li> */}
     </ul>
   );
 };
 
 Statistics.propTypes = {
-  good: PropTypes.number.isRequired,
-  neutral: PropTypes.number.isRequired,
-  bad: PropTypes.number.isRequired,
-  total: PropTypes.number.isRequired,
-  positivePercentage: PropTypes.string.isRequired,
+  statisticData: PropTypes.object.isRequired,
 };
 
 export default Statistics;
